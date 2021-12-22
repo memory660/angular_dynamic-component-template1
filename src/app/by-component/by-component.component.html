@@ -1,0 +1,11 @@
+<p>by-component works!</p>
+
+<div *ngFor="let test of array" class="border">
+  <p>{{ test.name }}</p>
+  <div class="tabs">
+    <button (click)="apple(test.name)">Apples Component</button>
+    <button (click)="strawberry(test.name)">Strawberry Component</button>
+  </div>
+
+  <ng-container [appHash]="test.name"></ng-container>
+</div>
